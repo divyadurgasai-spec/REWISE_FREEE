@@ -34,7 +34,6 @@ model = st.selectbox("🧠 Choose a Model", [
 # Button
 if st.button("⚡ Generate"):
     
-    else:
         with st.spinner("Generating..."):
 
             # Prompt mapping
@@ -69,4 +68,5 @@ if st.button("⚡ Generate"):
                 st.markdown(notes)
             else:
                 st.error(f"❌ Error: {response.status_code} - {response.json()}")
+
 
