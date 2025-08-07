@@ -47,7 +47,7 @@ if st.button("⚡ Generate"):
             }
 
             headers = {
-                "HTTP-Referer": "rewise-freee.streamlit.app",
+                "HTTP-Referer": "rewise-free.streamlit.app",
                 "X-Title": "REWISE Ultimate"
             }
 
@@ -69,3 +69,4 @@ if st.button("⚡ Generate"):
                 st.markdown(notes)
             else:
                 st.error(f"❌ Error: {response.status_code} - {response.json()}")
+
