@@ -7,9 +7,6 @@ st.set_page_config(page_title="REWISE: Notes Generator", page_icon="🧠")
 st.title("🧠 REWISE: AI-Powered Revision Tool")
 st.markdown("Generate NEET OR JEE -style notes, mnemonics, MCQs, or diagrams — for **any Biology topic**!")
 
-# API Key input
-api_key = st.text_input("🔑 Enter your OpenRouter API Key (get one at https://openrouter.ai/keys)", type="password")
-
 # Input
 note_prompt = st.text_input("📘 Enter your topic (e.g. DNA replication, photosynthesis)")
 exam = input("Enter Exam (e.g., NEET/CBSE): ")
@@ -36,8 +33,7 @@ model = st.selectbox("🧠 Choose a Model", [
 
 # Button
 if st.button("⚡ Generate"):
-    if not api_key or not note_prompt:
-        st.warning("Please enter both your API key and a topic.")
+    
     else:
         with st.spinner("Generating..."):
 
@@ -51,8 +47,7 @@ if st.button("⚡ Generate"):
             }
 
             headers = {
-                "Authorization": f"Bearer {api_key}",
-                "HTTP-Referer": "rewise-free.streamlit.app",
+                "HTTP-Referer": "rewise-freee.streamlit.app",
                 "X-Title": "REWISE Ultimate"
             }
 
